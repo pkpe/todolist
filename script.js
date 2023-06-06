@@ -34,6 +34,6 @@ async function connectWallet() {
   const balance = await connection.getBalance(publicKey);
 
   console.log('Connected to Phantom wallet');
-  console.log('Public key:', publicKey.toString());
-  console.log('Balance:', balance);
+  console.log('Public key:', publicKey.toBase58());
+  console.log('Balance:', balance / solanaWeb3.LAMPORTS_PER_SOL, 'SOL');
 }
